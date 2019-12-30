@@ -1,26 +1,13 @@
 <template>
-  <div id="app">
-    <!-- <router-view /> -->
-    <vp-button>Primary</vp-button>
-    <vp-button theme="positive">Positive</vp-button>
-    <vp-button theme="warning">Warning</vp-button>
-    <div style="height:10px"></div>
-    <vp-button-group>
-      <vp-button active>Mini</vp-button>
-      <vp-button>Default</vp-button>
-      <vp-button>Large</vp-button>
-    </vp-button-group>
+  <div class="padded router-contaier">
+    <router-view />
   </div>
 </template>
 
 <script>
-import Button from '@/packages/button';
 export default {
-  name: 'app',
-  components:{
-    Button
-  }
-}
+  name: 'app'
+};
 </script>
 
 <style lang="scss">
