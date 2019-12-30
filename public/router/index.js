@@ -1,21 +1,16 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Button from '@/public/components/button';
-import ButtonGroup from '@/public/components/button-group';
+
+const routes = ['button', 'button-group', 'window'];
 
 Vue.use(Router);
 
 export default new Router({
-  routes: [
-    {
-      path: '/button',
-      name: 'button',
-      component: Button
-    },
-    {
-      path: '/button-group',
-      name: 'button-group',
-      component: ButtonGroup
-    }
-  ]
+  routes: routes.map((item) => {
+    return {
+      path: `/${item}`,
+      name: item,
+      component: require(`@/public/components/${item}`).default
+    };
+  })
 });
