@@ -1,5 +1,14 @@
 <template>
-  <button :class="['btn', theme ? `btn-${theme}` : '', size ? size : '']">
+  <button
+    :class="[
+      'btn',
+      theme ? `btn-${theme}` : '',
+      size ? size : '',
+      {
+        active
+      }
+    ]"
+  >
     <slot></slot>
   </button>
 </template>
@@ -12,7 +21,14 @@ export default {
       type: String,
       default: 'default'
     },
-    size: String
+    size: {
+      type: String,
+      default: ''
+    },
+    active: {
+      type: Boolean,
+      default: false
+    }
   }
 };
 </script>

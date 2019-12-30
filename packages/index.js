@@ -1,17 +1,13 @@
-import _ from 'lodash';
-import component from './component.json';
-const components = {};
+// https://juejin.im/post/5ab8bcdb6fb9a028b77acdbd
 
-component.components.forEach((item) => {
-  components[_.capitalize(item)] = require(`./${item}`).default;
-});
+const requireAll = (context) => context.keys().map(context);
+const component = require.context('./', true, /\.vue$/);
 
 const install = function(Vue) {
   if (install.installed) return;
-  Object.keys(components).forEach((key) => {
-    console.log(components[key].name, components[key]);
-
-    Vue.component(components[key].name, components[key]);
+  requireAll(component).forEach((item) => {
+    const comp = item.default;
+    Vue.component(comp.name, comp);
   });
 };
 
@@ -20,6 +16,5 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  install,
-  ...components
+  install
 };

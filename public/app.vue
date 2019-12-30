@@ -3,6 +3,13 @@
     <!-- <router-view /> -->
     <vp-button>Primary</vp-button>
     <vp-button theme="positive">Positive</vp-button>
+    <vp-button theme="warning">Warning</vp-button>
+    <div style="height:10px"></div>
+    <vp-button-group>
+      <vp-button active>Mini</vp-button>
+      <vp-button>Default</vp-button>
+      <vp-button>Large</vp-button>
+    </vp-button-group>
   </div>
 </template>
 
@@ -17,6 +24,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import './assets/style.scss';
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

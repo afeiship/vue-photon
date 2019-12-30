@@ -1,12 +1,12 @@
 <template>
-  <div class="button-group">
+  <div class="btn-group">
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'vh-button-group',
+  name: 'vp-button-group',
   props: {
   },
 };
