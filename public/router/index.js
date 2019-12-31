@@ -1,7 +1,14 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-const routes = ['button', 'button-group', 'checkbox', 'window'];
+const routes = [
+  'button',
+  'button-group',
+  'checkbox',
+  'form-group',
+  'icon',
+  'window'
+];
 
 Vue.use(Router);
 
