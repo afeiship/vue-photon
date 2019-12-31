@@ -3,7 +3,7 @@
     :class="[
       'btn',
       theme ? `btn-${theme}` : '',
-      size ? size : '',
+      size ? `btn-${size}` : '',
       {
         active
       }
@@ -19,7 +19,7 @@ export default {
   props: {
     theme: {
       type: String,
-      default: 'default'
+      default: ''
     },
     size: {
       type: String,
