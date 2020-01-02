@@ -27,7 +27,7 @@ export default {
     }
   },
   mounted() {
-    this.initValue();
+    this.setValue();
   },
   methods: {
     getValue() {
@@ -36,7 +36,7 @@ export default {
       const values = [].slice.call(options).map((item) => item.value);
       return this.multiple ? values : values[0];
     },
-    initValue() {
+    setValue() {
       const { value, multiple } = this;
       const values = multiple ? value : [value];
       const options = this.$el.querySelectorAll('option');
