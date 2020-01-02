@@ -1,6 +1,6 @@
 <template>
   <div class="padded container">
-    <vp-select :items="items" :model="selected">
+    <vp-select :items="items" v-model="selected1">
       <template v-slot="{ item, index }">
         <option :value="index">{{ item }} - {{ index }}</option>
       </template>
@@ -8,7 +8,18 @@
 
     <p>
       <strong>Selected:</strong>
-      <span>{{ selected }}</span>
+      <span>{{ selected1 }}</span>
+    </p>
+
+    <vp-select :items="items" v-model="selected2" multiple>
+      <template v-slot="{ item, index }">
+        <option :value="index">{{ item }} - {{ index }}</option>
+      </template>
+    </vp-select>
+
+    <p>
+      <strong>Selected:</strong>
+      <span>{{ selected2 }}</span>
     </p>
   </div>
 </template>
@@ -17,7 +28,8 @@
 export default {
   data() {
     return {
-      selected: 0,
+      selected1: '2',
+      selected2: ['0', '1', '3'],
       items: ['option1', 'option2', 'option3', 'option4']
     };
   }
