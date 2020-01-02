@@ -1,5 +1,6 @@
 <template>
   <vp-window relative>
+    <vp-toolbar-header title="header" />
     <vp-window-content>
       <div class="padded content">
         <p>少年时，想碰到一个聂小倩，拼了性命爱一场，天亮前带着她的魂魄远走他乡。</p>
@@ -11,5 +12,6 @@
         </p>
       </div>
     </vp-window-content>
+    <vp-toolbar-footer title="footer" />
   </vp-window>
 </template>
