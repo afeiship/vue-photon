@@ -38,9 +38,7 @@ export default {
   methods: {
     onChange(inEvent) {
       const { value } = inEvent.target;
-      this.radioGroup.$emit('change', {
-        target: { value }
-      });
+      this.radioGroup.$emit('change', value);
     }
   }
 };

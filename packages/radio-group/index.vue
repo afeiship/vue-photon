@@ -11,6 +11,10 @@ export default {
     name: String,
     value: String
   },
+  model: {
+    prop: 'value',
+    event: 'change'
+  },
   provide() {
     return {
       radioGroup: this
