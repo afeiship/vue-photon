@@ -7,7 +7,15 @@
         :class="['tab-item', { active: index === activeIndex }]"
         @click="change(index)"
       >
+        <span
+          class="icon icon-cancel icon-close-tab"
+          v-if="interactive"
+          @click="del(index)"
+        ></span>
         {{ item.title }}
+      </div>
+      <div v-if="interactive" class="tab-item tab-item-fixed" @click="add">
+        <span class="icon icon-plus"></span>
       </div>
     </nav>
     <div class="tabs__content">
@@ -20,6 +28,10 @@
 export default {
   name: 'vp-tabs',
   props: {
+    interactive: {
+      type: Boolean,
+      default: false
+    },
     activeIndex: {
       type: Number,
       default: 0
@@ -36,6 +48,12 @@ export default {
     change(inIndex) {
       this.tabs.forEach((item, index) => (item.active = inIndex === index));
       this.$emit('update:activeIndex', inIndex);
+    },
+    add() {
+      // this.tabs.push({ title: 'unnameed', active: false });
+    },
+    del(inIndex) {
+      // this.tabs.splice(inIndex, 1);
     }
   }
 };
