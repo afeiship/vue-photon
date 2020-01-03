@@ -4,6 +4,7 @@ const merge = require('webpack-merge');
 module.exports = (inEnv) => {
   return merge(baseConfg(inEnv), {
     mode: 'development',
-    entry: './public/main.js'
+    entry: './public/main.js',
+    devtool: 'source-map'
   });
 };
