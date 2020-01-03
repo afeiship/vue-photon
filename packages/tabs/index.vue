@@ -1,6 +1,6 @@
 <template>
   <section class="tabs">
-    <nav class="tabs__menu">
+    <nav class="tab-group tabs__menu">
       <div
         v-for="(item, index) in tabs"
         :key="index"
@@ -43,9 +43,7 @@ export default {
 
 <style lang="scss">
 .tabs {
-  flex: 1;
   &__menu {
-    display: flex;
   }
   &__content {
     padding: 14px;
