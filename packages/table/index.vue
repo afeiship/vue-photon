@@ -1,5 +1,5 @@
 <template>
-  <div :class="['table', { 'table-striped': striped }]">
+  <table :class="['table', { 'table-striped': striped }]">
     <thead>
       <tr>
         <template v-for="(item, index) in columns">
@@ -15,7 +15,7 @@
         </td>
       </tr>
     </tbody>
-  </div>
+  </table>
 </template>
 
 <script>

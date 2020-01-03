@@ -1,14 +1,18 @@
 <template>
   <div class="padded container">
-    <vp-table :items="table.items" :columns="table.columns">
-      <template v-slot:column="{ item, index }">
-        <th>{{ item.label }}</th>
-      </template>
+    <vp-window relative>
+      <vp-window-content>
+        <vp-table striped :items="table.items" :columns="table.columns">
+          <template v-slot:column="{ item, index }">
+            <th>{{ item.label }}</th>
+          </template>
 
-      <template v-slot:item="{ item, column, index }">
-        <td>{{ item[column.dataIndex] }}</td>
-      </template>
-    </vp-table>
+          <template v-slot:item="{ item, column, index }">
+            <td>{{ item[column.dataIndex] }}</td>
+          </template>
+        </vp-table>
+      </vp-window-content>
+    </vp-window>
   </div>
 </template>
 
