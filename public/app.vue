@@ -1,13 +1,31 @@
 <template>
   <div class="example-component-window">
-    <img src="https://qzonestyle.gtimg.cn/qz-proj/wy-pc-v3/static/img/web/part-login@2x.jpg" class="vue-full-image" />
-    <router-view />
+    <img src="//img.alicdn.com/tps/TB1h9xxIFXXXXbKXXXXXXXXXXXX.jpg" class="vue-full-image" />
+    <vp-window class="webkit-sassui-animate-float1">
+      <vp-toolbar-header title="vue-photon"/>
+      <vp-window-content>
+        <vp-pane-group>
+          <vp-pane sidebar mini>
+            <vp-nav-group :items="navs" />
+          </vp-pane>
+          <vp-pane>
+            <router-view />
+          </vp-pane>
+        </vp-pane-group>
+      </vp-window-content>
+      <vp-toolbar-footer title="Developed by afeiship"/>
+    </vp-window>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  data(){
+    return {
+      navs: require('@/public/assets/json/navs.json')
+    }
+  }
 };
 </script>
 
