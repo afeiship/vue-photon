@@ -19,7 +19,13 @@ module.exports = (inEnv) => {
         },
         {
           test: /\.(sa|sc|c)ss$/,
-          use: ['style-loader', 'css-loader', 'postcss-loader', 'resolve-url-loader','sass-loader']
+          use: [
+            'style-loader',
+            'css-loader',
+            'postcss-loader',
+            'resolve-url-loader',
+            'sass-loader'
+          ]
         },
         {
           test: /\.(png|svg|jpg|gif)$/,
@@ -47,7 +53,8 @@ module.exports = (inEnv) => {
       extensions: ['.js', '.vue', '.json'],
       alias: {
         vue$: 'vue/dist/vue.esm.js',
-        '@': resolve('.')
+        '@': resolve('.'),
+        packages: resolve('packages')
       }
     },
     plugins: [
