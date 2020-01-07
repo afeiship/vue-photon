@@ -1,17 +1,88 @@
-* {
-  margin: 0;
-  padding: 0;
+#app {
+  height: 100%;
 }
 
-body {
-  font-size: 14px;
+.vue-full-image {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1280px;
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
 }
-
-.container {
-  .btn {
-    margin-right: 10px;
+@media screen and (max-width: 1280px) {
+  .vue-full-image {
+    left: 50%;
+    margin-left: -640px;
   }
-  .is-row {
-    margin-bottom: 10px;
+}
+
+.example-component-window {
+  height: 100%;
+  position: relative;
+  > .window {
+    width: 80%;
+    height: 80%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .layout-header {
+    border-left: 4px solid #eee;
+    padding-left: 10px;
+    text-transform: capitalize;
+  }
+
+  .exmaple-icon,
+  .exmaple-all {
+    > .icon {
+      margin-right: 5px;
+      margin-left: 5px;
+      font-size: 24px;
+      color: #666;
+    }
+  }
+
+  .exmaple-button,
+  .exmaple-all {
+    > .btn {
+      margin-right: 5px;
+    }
+  }
+
+  .exmaple-window,
+  .exmaple-tabs {
+    p {
+      border-left: 4px solid #eee;
+      padding-left: 10px;
+      & + p {
+        margin-top: 10px;
+      }
+    }
+  }
+  .layout-property {
+    th {
+      text-transform: capitalize;
+      font-weight: 800;
+    }
+  }
+  .exmaple-github {
+    a {
+      cursor: pointer;
+      color: #007aff;
+      span{
+        margin-left: 4px;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }

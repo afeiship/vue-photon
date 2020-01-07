@@ -1,5 +1,6 @@
 <template>
-  <div class="padded router-contaier">
+  <div class="example-component-window">
+    <img src="https://qzonestyle.gtimg.cn/qz-proj/wy-pc-v3/static/img/web/part-login@2x.jpg" class="vue-full-image" />
     <router-view />
   </div>
 </template>
