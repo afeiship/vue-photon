@@ -1,7 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 function resolve(dir) {
   return path.join(__dirname, '..', dir);
@@ -52,7 +51,7 @@ module.exports = (inEnv) => {
     resolve: {
       extensions: ['.js', '.vue', '.json'],
       alias: {
-        vue$: 'vue/dist/vue.esm.js',
+        // vue$: 'vue/dist/vue.esm.js',
         '@': resolve('.'),
         packages: resolve('packages')
       }
@@ -60,10 +59,7 @@ module.exports = (inEnv) => {
     plugins: [
       // 解决vender后面的hash每次都改变
       // new webpack.HashedModuleIdsPlugin(),
-      new VueLoaderPlugin(),
-      new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, '../public/index.ejs')
-      })
+      new VueLoaderPlugin()
     ]
   };
 };
