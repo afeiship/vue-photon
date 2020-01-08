@@ -37,8 +37,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-p + p {
+p {
   margin: 0;
   margin-bottom: 10px;
+  .btn {
+    margin-right: 10px;
+  }
 }
 </style>

@@ -3,6 +3,8 @@
 }
 
 @import '~@feizheng/webkit-sassui-animate-float';
+@import '~@feizheng/webkit-sass-reset/dist/base.scss';
+@import '~@feizheng/photon';
 
 .vue-full-image {
   /* Set rules to fill background */

@@ -9,10 +9,6 @@
         <label for="password">Password:</label>
         <vp-input id="password" name="password" type="password" placeholder="Password" />
       </vp-form-group>
-      <vp-form-group>
-        <label for="description">Description:</label>
-        <vp-textarea id="description" name="description" placeholder="Description" />
-      </vp-form-group>
     </form>
   </vp-container>
 </template>

@@ -8,7 +8,7 @@
           </template>
 
           <template v-slot:item="{ item, column, index }">
-            <td>{{ item[column.dataIndex] }}</td>
+            {{ item[column.dataIndex] }}
           </template>
         </vp-table>
       </vp-window-content>

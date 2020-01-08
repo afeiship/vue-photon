@@ -1,6 +1,11 @@
 <template>
   <label>
-    <input type="checkbox" :defaultChecked="defaultValue" :checked="value" @change="change" />
+    <input
+      type="checkbox"
+      :defaultChecked="defaultValue"
+      :checked="value"
+      @change="change"
+    />
     <slot></slot>
   </label>
 </template>
