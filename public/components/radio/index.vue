@@ -1,5 +1,5 @@
 <template>
-  <div class="padded container">
+  <vp-container>
     <vp-radio-group name="hobby" v-model="value">
       <vp-radio value="op1" label="option one" />
       <vp-radio value="op2" label="option two" />
@@ -8,7 +8,7 @@
     <p>
       <span>value: {{ value }}</span>
     </p>
-  </div>
+  </vp-container>
 </template>
 
 <script>

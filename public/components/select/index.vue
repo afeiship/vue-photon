@@ -1,5 +1,5 @@
 <template>
-  <div class="padded container">
+  <vp-container>
     <vp-select :items="items" v-model="selected1">
       <template v-slot="{ item, index }">
         <option :value="index">{{ item }} - {{ index }}</option>
@@ -21,7 +21,7 @@
       <strong>Selected:</strong>
       <span>{{ selected2 }}</span>
     </p>
-  </div>
+  </vp-container>
 </template>
 
 <script>

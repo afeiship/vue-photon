@@ -1,5 +1,5 @@
 <template>
-  <div class="padded container">
+  <vp-container>
     <vp-window relative>
       <vp-window-content>
         <vp-table striped :items="table.items" :columns="table.columns">
@@ -13,7 +13,7 @@
         </vp-table>
       </vp-window-content>
     </vp-window>
-  </div>
+  </vp-container>
 </template>
 
 <script>

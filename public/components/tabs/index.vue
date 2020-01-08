@@ -1,5 +1,5 @@
 <template>
-  <div class="padded container">
+  <vp-container>
     <vp-window relative>
       <vp-toolbar-header title="header" />
       <vp-tabs :activeIndex.sync="activeIndex">
@@ -27,7 +27,7 @@
         </vp-tab>
       </vp-tabs>
     </vp-window>
-  </div>
+  </vp-container>
 </template>
 
 <script>

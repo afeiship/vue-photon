@@ -1,7 +1,9 @@
 <template>
-  <vp-checkbox @change="onChange">
-    I am a checkbox.
-  </vp-checkbox>
+  <vp-container>
+    <vp-checkbox @change="onChange">
+      I am a checkbox.
+    </vp-checkbox>
+  </vp-container>
 </template>
 
 <script>

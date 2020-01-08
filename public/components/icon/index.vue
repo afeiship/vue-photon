@@ -1,8 +1,8 @@
 <template>
-  <div class="padded container">
+  <vp-container>
     <vp-icon value="search" />
     <vp-icon value="home" />
-  </div>
+  </vp-container>
 </template>
 
 <style lang="scss" scoped>

@@ -1,6 +1,6 @@
 <template>
-  <div class="padded container">
-    <div class="is-row">
+  <vp-container>
+    <p>
       <vp-button
         size="large"
         v-for="(item, index) in themes"
@@ -8,13 +8,13 @@
         :theme="item"
         >{{ item }}</vp-button
       >
-    </div>
-    <div class="is-row">
+    </p>
+    <p>
       <vp-button v-for="(item, index) in themes" :key="index" :theme="item">{{
         item
       }}</vp-button>
-    </div>
-    <div class="is-row">
+    </p>
+    <p>
       <vp-button
         size="mini"
         v-for="(item, index) in themes"
@@ -22,8 +22,8 @@
         :theme="item"
         >{{ item }}</vp-button
       >
-    </div>
-  </div>
+    </p>
+  </vp-container>
 </template>
 <script>
 export default {
@@ -35,3 +35,10 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+p + p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+</style>
