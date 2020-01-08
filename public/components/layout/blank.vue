@@ -1,5 +1,5 @@
 <template>
-  <div class="blank" :style="{ height }"></div>
+  <div class="blank" :style="{ height: height + 'px' }"></div>
 </template>
 
 <script>

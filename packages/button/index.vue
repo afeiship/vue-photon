@@ -19,7 +19,7 @@ export default {
   props: {
     theme: {
       type: String,
-      default: ''
+      default: 'default'
     },
     size: {
       type: String,

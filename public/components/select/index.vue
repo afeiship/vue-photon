@@ -7,9 +7,11 @@
     </vp-select>
 
     <p>
-      <strong>Selected:</strong>
+      <span>Selected:</span>
       <span>{{ selected1 }}</span>
     </p>
+
+    <vp-blank />
 
     <vp-select :items="items" v-model="selected2" multiple>
       <template v-slot="{ item, index }">
@@ -18,7 +20,7 @@
     </vp-select>
 
     <p>
-      <strong>Selected:</strong>
+      <span>Selected:</span>
       <span>{{ selected2 }}</span>
     </p>
   </vp-container>
@@ -36,9 +38,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.container {
-  font-size: 20px;
-  color: #333;
-}
-</style>
+<style lang="scss" scoped></style>

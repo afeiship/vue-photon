@@ -42,6 +42,7 @@ p {
   margin-bottom: 10px;
   .btn {
     margin-right: 10px;
+    text-transform: capitalize;
   }
 }
 </style>

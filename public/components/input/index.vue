@@ -12,3 +12,8 @@
     </form>
   </vp-container>
 </template>
+
+<script>
+export default {
+};
+</script>

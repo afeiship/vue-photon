@@ -8,5 +8,9 @@
   "radio",
   "select",
   "tabs",
-  "table"
+  "table",
+  "input",
+  "textarea",
+  "toolbar",
+  "preview"
 ]
