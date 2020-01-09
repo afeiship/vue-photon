@@ -17,6 +17,11 @@ module.exports = (inEnv) => {
           loader: 'vue-loader'
         },
         {
+          test: /\.snippet$/,
+          exclude: /node_modules/,
+          use: ['raw-loader']
+        },
+        {
           test: /\.(sa|sc|c)ss$/,
           use: [
             'style-loader',
