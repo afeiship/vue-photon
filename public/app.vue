@@ -1,7 +1,7 @@
 <template>
   <div class="example-component-window">
     <img src="//img.alicdn.com/tps/TB1h9xxIFXXXXbKXXXXXXXXXXXX.jpg" class="vue-full-image" />
-    <vp-window class="webkit-sassui-animate-float1">
+    <vp-window class="webkit-sassui-animate-float">
       <vp-toolbar-header title="vue-photon"/>
       <vp-window-content>
         <vp-pane-group>
