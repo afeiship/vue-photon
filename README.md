@@ -1,6 +1,9 @@
 # vue-photon
 > Photon components built with Vue.
 
+## preivew
+- https://afeiship.github.io/vue-photon/
+
 
 ## webpack
 - https://juejin.im/post/5b7d350951882542f3278b11
