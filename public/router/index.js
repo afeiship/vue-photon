@@ -14,5 +14,5 @@ const dynamic = routes.map((item) => {
 });
 
 export default new Router({
-  routes: [{ path: '/', redirect: { name: 'button' } }].concat(dynamic)
+  routes: [{ path: '/', redirect: { name: 'preview' } }].concat(dynamic)
 });

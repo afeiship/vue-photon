@@ -2,7 +2,12 @@
   <div :class="`padded exmaple-${name} container`">
     <slot></slot>
 
-    <pre v-highlightjs> <code class="vue">{{ snippet }}</code> </pre>
+    <pre class="highlight-body" v-highlightjs>
+      <button class="clippy-btn" @click="copy">
+      <img src="http://xiaokaike.github.io/vue-clipboard/example/clippy.svg" width="13"/>
+      </button>
+      <code class="vue">{{ snippet }}</code>
+    </pre>
   </div>
 </template>
 
@@ -16,7 +21,14 @@ export default {
   },
   computed: {
     snippet() {
-      return require(`@/public/components/${this.name}/index.vue.snippet`).default;
+      return require(`@/public/components/${this.name}/index.vue.snippet`)
+        .default;
+    }
+  },
+  methods: {
+    copy() {
+      nx.toClipboard(this.snippet);
+      console.log('success!');
     }
   }
 };
@@ -24,5 +36,35 @@ export default {
 
 <style lang="scss" scoped>
 .container {
+  .highlight-body {
+    position: relative;
+  }
+  .clippy-btn {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #333;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-color: #eee;
+    background-image: linear-gradient(#fcfcfc, #eee);
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    -webkit-appearance: none;
+    &:hover,
+    &:active {
+      text-decoration: none;
+      background-color: #ddd;
+      background-image: linear-gradient(#eee, #ddd);
+      border-color: #ccc;
+    }
+  }
 }
 </style>
