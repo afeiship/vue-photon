@@ -4,6 +4,11 @@
 ## preivew
 - https://afeiship.github.io/vue-photon/
 
+## installation
+```shell
+npm i -S vue-photon
+```
+
 
 ## webpack
 - https://juejin.im/post/5b7d350951882542f3278b11
