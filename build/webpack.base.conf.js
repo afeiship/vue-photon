@@ -58,6 +58,7 @@ module.exports = (inEnv) => {
       alias: {
         vue$: 'vue/dist/vue.esm.js',
         '@': resolve('.'),
+        assets: resolve('./public/assets'),
         packages: resolve('packages')
       }
     },

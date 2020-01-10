@@ -4,7 +4,7 @@
 
     <pre class="highlight-body" v-highlightjs>
       <button class="clippy-btn" @click="copy">
-      <img src="http://xiaokaike.github.io/vue-clipboard/example/clippy.svg" width="13"/>
+      <img :src="clippy" width="13"/>
       </button>
       <code class="vue">{{ snippet }}</code>
     </pre>
@@ -16,6 +16,7 @@ export default {
   name: 'vp-container',
   data() {
     return {
+      clippy: require('assets/images/clippy.svg').default,
       name: location.hash.slice(2)
     };
   },
