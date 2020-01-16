@@ -6,6 +6,7 @@
         v-for="(item, index) in themes"
         :key="index"
         :theme="item"
+        @click="onClick(item, $event)"
         >{{ item }}</vp-button
       >
     </p>
@@ -32,6 +33,11 @@ export default {
       themes: require('@/public/assets/json/theme.json'),
       sizes: require('@/public/assets/json/size.json')
     };
+  },
+  methods: {
+    onClick(inItem, inEvent) {
+      console.log(inItem, inEvent);
+    }
   }
 };
 </script>

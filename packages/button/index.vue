@@ -1,5 +1,6 @@
 <template>
   <button
+    @click="$emit('click', $event)"
     :class="[
       'btn',
       theme ? `btn-${theme}` : '',
